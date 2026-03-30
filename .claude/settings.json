@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '*** 코드가 수정되었습니다. make test를 실행하세요 ***'"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "matcher": "compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo 'TDD 규칙: 테스트 먼저 작성, make test 필수, gcc로 컴파일'"
+          }
+        ]
+      }
+    ]
+  }
+}
